@@ -1,0 +1,121 @@
+site_name: AI Linguo - Documentação
+site_description: 'Documentação completa do projeto AI Linguo - Tutor de Inglês com IA'
+site_author: 'Arthur Carvalho Leite'
+site_url: 'https://arthurleite.github.io/ai-linguo'
+
+# Repositório
+repo_name: 'arthurleite/ai-linguo'
+repo_url: 'https://github.com/arthurleite/ai-linguo'
+
+# Configuração do tema
+theme:
+  name: material
+  language: pt
+  palette:
+    # Modo claro
+    - scheme: default
+      primary: blue
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Alternar para modo escuro
+    # Modo escuro  
+    - scheme: slate
+      primary: blue
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Alternar para modo claro
+  
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+  icon:
+    repo: fontawesome/brands/github
+
+# Navegação
+nav:
+  - Home: index.md
+  - Requisitos:
+    - Funcionais: requisitos/funcionais.md
+    - Não Funcionais: requisitos/nao-funcionais.md
+  - Protótipos:
+    - Telas Principais: prototipos/telas.md
+    - Fluxo do Usuário: prototipos/fluxo.md
+  - Como Funciona:
+    - Arquitetura: funcionamento/arquitetura.md
+    - IA e Algoritmos: funcionamento/ia.md
+    - Base de Dados: funcionamento/banco.md
+  - Desenvolvedor: desenvolvedor.md
+
+# Plugins
+plugins:
+  - search:
+      lang: pt
+  - minify:
+      minify_html: true
+
+# Extensões do Markdown
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: arthurleite
+      repo: ai-linguo
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# CSS personalizado
+extra_css:
+  - assets/custom.css
+
+# JavaScript extra
+extra_javascript:
+  - assets/custom.js
+
+# Informações extras
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/arthurleite
+    - icon: fontawesome/brands/linkedin  
+      link: https://linkedin.com/in/arthurleite
+  version:
+    provider: mike
